@@ -15,6 +15,7 @@ public class Main {
         String regex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
         String mail = "opåw+++@gmail.com";
         //Pattern pattern = new Pattern.matches(regex);
+        Validation valid = Validation.isValid(mail);
         System.out.println(Validation.isValid(mail));
         System.out.println("DO you want to validate your email by input or by file");
         /*File file = new File("/Users/mariannap/Desktop/HKR/Year 1/Methods of Sustainable Programming/ProjectEx1/Examination1/src/se/hkr/names.txt");
