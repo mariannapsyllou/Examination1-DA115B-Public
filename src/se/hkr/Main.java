@@ -27,18 +27,23 @@ public class Main {
                     .collect(Collectors.toList());
              validEmails.forEach(System.out::println);
 
+
         // Grouping emails depending on their domain
             Map<String, List<String>> groupingEmails = validEmails.stream()
                     .collect(Collectors.groupingBy(email->email.substring(email.indexOf("@") + 1)));
             groupingEmails.entrySet().forEach(entry->{
-                        System.out.printf("Domain: " +"\n" + entry.getKey());
-                        System.out.println("\nEmails: ");
+                        System.out.println("\nDomain: " + entry.getKey());
+                        System.out.println("Emails: ");
                         entry.getValue().forEach(email-> System.out.println("" + email));
             });
+
+
 
         }catch(IOException e){
             e.printStackTrace();
         }
+
+
     }
 }
 
